@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title #{title}
+        meta(charset="utf-8")
+    body
+        form(method='POST' action='/todos')
+            div
+                label Tache :
+                input(type='text' id='message' name='message')
+            button(type='submit') Ajouter

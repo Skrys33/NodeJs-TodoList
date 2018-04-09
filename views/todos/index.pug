@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title #{title}
+        meta(charset="utf-8")
+    body
+        div(style="")
+            a(href='/todos/add') Ajouter une tache
+            table(style="border-collapse: collapse;border: 1px solid black;")
+                    thead
+                        tr
+                            th(style="border: 1px solid black;") Numero
+                            th(style="border: 1px solid black;") Message
+                            th(style="border: 1px solid black;") Effectué ? 
+                            th(style="border: 1px solid black;") Date de réation
+                            th(style="border: 1px solid black;") Date de mise à jour
+                    tbody
+                        each todo in todos
+                            tr(style="cursor: pointer;" onclick="window.location='/todos/"+todo.id+"';")
+                                td(style="border: 1px solid black;") #{todo.id}
+                                td(style="border: 1px solid black;") #{todo.message}
+                                td(style="border: 1px solid black;") #{todo.completion}
+                                td(style="border: 1px solid black;") #{todo.created}
+                                td(style="border: 1px solid black;") #{todo.updated}

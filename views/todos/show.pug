@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title #{title}
+        meta(charset="utf-8")
+    body
+        div
+            h4 Todo n° #{todo.id}
+            p #{todo.message}
+            p #{todo.completion}
+            p #{todo.created}
+            p #{todo.updated}
+            div
+                a(href='/todos/'+todo.id+'/delete') Supprimer
+            div
+                a(href='/todos/'+todo.id+'/edit') Modifier

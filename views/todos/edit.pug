@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title #{title}
+        meta(charset="utf-8")
+    body
+        div
+            h4 Todo n° #{todo.id}
+            div
+                label Message :
+                input(id="message" name="message" type="text" value= todo.message)
+                div(style="margin-top: 1em;")
+                    label Complétion :
+                    select(id="select" name="completion")
+                        option oui
+                        option non
+                    br
+                    div
+                        a(href='/todos/'+todo.id+'/register') Modifier
